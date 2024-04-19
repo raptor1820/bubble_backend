@@ -1,4 +1,6 @@
-from flask import Flask,request
+print("Hello World")
+from flask import Flask
+from flask import request
 from flask_cors import CORS
 from ml_utils import driver
 
