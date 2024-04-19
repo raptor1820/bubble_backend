@@ -1,6 +1,7 @@
 from flask import Flask,request
 from flask_cors import CORS
 from ml_utils import driver
+from waitress import serve
 
 app = Flask(__name__)
 CORS(app)
@@ -13,4 +14,4 @@ def root():
         return {"error": "error"}
     
 if __name__== "__main__":
-    app.run()
+    serve(app, host='0.0.0.0', port=5000)
