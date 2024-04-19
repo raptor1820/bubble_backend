@@ -3,6 +3,7 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 from ml_utils import driver
+import os
 
 
 app = Flask(__name__)
@@ -16,4 +17,5 @@ def root():
         return {"error": "error"}
     
 if __name__== "__main__":
-    app.run()
+    # app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER_PORT"), )
+    app.run(host='0.0.0.0', port=5000 )
